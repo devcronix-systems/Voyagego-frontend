@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'voyagego';
+  formGroup = this.fb.group({
+    login: ['', []],
+    password: ['', []]
+  });
+
+  constructor(private fb: FormBuilder) { }
 }
